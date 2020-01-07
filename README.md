@@ -14,7 +14,7 @@ $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"vill
 $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"météo\"}" http://localhost:3000/chat # --> Il fait beau
 
 # Depend on the content of the 'reponses.json' file
-# If you even reload the server, you can get the information if it is correctly stored in the 'reponses.json' file {
+# If you even reload the server, you can get the information if it is correctly stored in the 'reponses.json' file =>
 
 # If 'demain' is not defined in 'reponses.json' file :
 $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat # --> Je ne connais pas demain…
@@ -23,7 +23,7 @@ $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"dema
 # If 'demain' is defined in 'reponses.json' file : 
 $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"demain\"}" http://localhost:3000/chat # --> demain: Mercredi
 
-#}
+
 ```
 
 ## Setup
