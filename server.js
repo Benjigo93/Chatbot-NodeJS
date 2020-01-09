@@ -2,7 +2,6 @@
 
 const express = require('express')
 const app = express()
-let encoding = require("encoding");
 let fs = require('fs')
 
 // Use json middleware to deal with json data
@@ -28,10 +27,9 @@ app.get('/hello', (req, res) => {
 
 // POST '/chat'
 app.post('/chat', (req, res) => {
-  let message = encoding.convert(req.body.msg, 'utf8', 'Latin_1');
   if (req.body.msg === "ville") {
     res.send("Nous sommes à Paris");
-  } else if (message == "mýtýo") {
+  } else if (req.body.msg === "météo") {
     res.send("Il fait beau");
   } else if (req.body.msg !== undefined) {
     let resultat = parseData(req.body.msg)

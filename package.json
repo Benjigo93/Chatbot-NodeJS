@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/Benjigo93/chatbot#readme",
   "dependencies": {
-    "encoding": "^0.1.12",
     "express": "^4.17.1"
   }
 }
