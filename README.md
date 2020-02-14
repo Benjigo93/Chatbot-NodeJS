@@ -4,6 +4,10 @@
 
 Implementation of the API server described in https://adrienjoly.com/cours-nodejs/01-chatbot/, for educational purposes.
 
+## Production
+
+https://intense-oasis-13244.herokuapp.com/
+
 ## Usage
 
 ```sh
