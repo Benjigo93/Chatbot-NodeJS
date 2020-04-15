@@ -43,8 +43,12 @@ $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"dema
 
 | Method | Endpoint | Description |
 | :--- | :--- | :--- |
-| GET | /messages/all | Show all stored messages
-| DELETE | /messages/last | Delete last conversation
+| GET | / | Output => Hello World
+| GET | /hello | Output => Quel est votre nom ?
+| GET | /hello?nom={your name} | Output => Bonjour, {your name} !
+| POST | /chat| Chat with bot, data in JSON format is required
+| GET | /messages/all | Show all stored messages with bot
+| DELETE | /messages/last | Delete last conversation with bot
 
 
 ## Setup
