@@ -34,6 +34,7 @@ $ curl -X POST --header "Content-Type: application/json" --data "{\"msg\":\"dema
 
 ```
 $ git clone https://github.com/Benjigo93/chatbot.git
+$ cd chatbot
 $ npm install
 $ npm start
 ```

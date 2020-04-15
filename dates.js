@@ -7,7 +7,7 @@ const assert = require('assert');
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
   // Database Name
-  const dbName = 'chatbot';
+  const dbName = 'chat-bot';
 
   try {
     // Use connect method to connect to the Server
