@@ -1,10 +1,12 @@
 const PORT = process.env.PORT || 3000;
+const dotenv = require('dotenv')
 const FICHIER_REPONSES = "réponses.json";
 const MongoClient = require('mongodb').MongoClient;
 const fs = require("fs");
 const express = require("express");
 const app = express();
 
+dotenv.config()
 console.log("Lecture des réponses depuis", FICHIER_REPONSES);
 
 function readFileAsPromised(file, encoding) {
@@ -31,7 +33,7 @@ function writeFileAsPromised(file, data) {
 const promesseReponses = readFileAsPromised(FICHIER_REPONSES, "utf8");
 
 (async () => {
-  const uri = "mongodb+srv://chatbot:chatbot@chatbot-nodejs-wts3i.azure.mongodb.net/test?retryWrites=true&w=majority";
+  const uri = "mongodb+srv://"+ process.env.DB_USER +":"+ process.env.DB_PASSWORD +"@"+ process.env.DB_URL;
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
   const dbName = 'chat-bot';
 
